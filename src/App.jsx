@@ -1,12 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, Route } from 'react-router-dom'
-import { RouterProvider , createRoutesFromElements } from 'react-router-dom'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { RouterProvider, createRoutesFromElements } from 'react-router-dom'
 import './App.css'
 import Product from './components/Product'
 import Dashboard from './components/Dashboard';
+import Cart from './components/Cart';
 import Rootlayout from './components/Rootlayout';
 
 function App() {
@@ -15,8 +13,8 @@ function App() {
       <Route path="/" element={<Rootlayout />}>
         <Route index element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
-      </Route >
-      
+        <Route path="/products" element={<Product />} />
+      </Route>
     )
   )
 
